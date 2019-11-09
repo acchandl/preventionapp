@@ -732,7 +732,6 @@ ALEXIS END ------------------------->
                     echo "<div class=\"card bg-primary text-white shadow\">";
                       echo "<div class=\"card-body\">";
                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $staffName . "</p>";
-                        echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $date . "</p>";
                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $group . "</p>";
                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $serviceArea . "</p>";
                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $activityAreaPrevention . "</p>";
