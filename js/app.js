@@ -8,7 +8,7 @@
  *******************************************************/
 
  $(document).ready(function (e) {
-  $("#serviceLogForm").on('submit',(function(e) {
+  $("#form").on('submit',(function(e) {
    e.preventDefault();
    $.ajax({
     url: "ajax.php",
