@@ -378,7 +378,7 @@
               </div>
               <div class="card-body">
                 <!--<form action="javascript:void(0)" id="form">-->
-                  <form action="ajax.php" id="projectionLogForm" method="post" enctype="multipart/form-data">
+                  <form action="ajaxUpload.php" id="projectionLogForm" method="post" enctype="multipart/form-data">
                   <div class="form-row">
                     <div class="form-group col-md-8">
                       <label for="staffName">Staff Name</label>
@@ -569,8 +569,8 @@
                  echo "</div>";
                echo "</div>";
              }
-             //mysqli_close($db);
-             //$db->close();
+             mysqli_close($db);
+             $db->close();
          ?>
 
 
