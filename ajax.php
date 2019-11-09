@@ -1,7 +1,8 @@
 <?php
 
+// note: need to close off  OR make additional !empty groupings - 11/9/19
 
-if(!empty($_POST['staffName']) || $_POST['group']) || $_POST['serviceArea']) || $_POST['activityAreaPrevention']) || $_POST['curriculum']) || $_POST['unitChapter']) || $_POST['actionSteps']) || $_POST['nom']) || $_POST['objectiveAddressed']) || $_POST['directServiceStart']) || $_POST['indirectServiceStart']) || $_POST['otherInfo']) )
+if(!empty($_POST['staffName']) || !empty($_POST['group']) || !empty($_POST['serviceArea']) || !empty($_POST['activityAreaPrevention']) || !empty($_POST['curriculum']) || !empty($_POST['unitChapter']) || !empty($_POST['actionSteps']) || !empty($_POST['nom']) || !empty($_POST['objectiveAddressed']) || !empty($_POST['directServiceStart']) || !empty($_POST['indirectServiceStart']) || !empty($_POST['otherInfo']) )
 {
 
 	if(move_uploaded_file())
@@ -23,7 +24,8 @@ $otherInfo = $_POST['otherInfo'];
 include_once 'db.php';
 
 //insert form data in the database
-$insert = $db->query("INSERT file (staffName,group,serviceArea,activityAreaPrevention,activityAreaOutreach,curriculum,unitChapter,actionSteps,nom,objectiveAddressed,directServiceStart,indirectServiceStart,otherInfo) VALUES ('".$staffName."','".$group."','".$serviceArea."','".$activityAreaPrevention."','".$curriculum."','".$unitChapter."','".$actionSteps."','".$nom."','".$objectiveAddressed."','".$directServiceStart."','".$indirectServiceStart."','".$otherInfo."')");
+$insert = $db->query("INSERT file (staffName,group,serviceArea,activityAreaPrevention,activityAreaOutreach,curriculum,unitChapter,actionSteps,nom,objectiveAddressed,directServiceStart,indirectServiceStart,otherInfo) VALUES
+('".$staffName."','".$group."','".$serviceArea."','".$activityAreaPrevention."','".$curriculum."','".$unitChapter."','".$actionSteps."','".$nom."','".$objectiveAddressed."','".$directServiceStart."','".$indirectServiceStart."','".$otherInfo."')");
 
 //echo $insert?'ok':'err';
 
