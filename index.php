@@ -137,7 +137,7 @@
    ALEXIS END ----------------------------------------------------->
 
    <li class="nav-item">
-     <a class="nav-link" href="projectionLog.html">
+     <a class="nav-link" href="projectionLog.php">
        <i class="fas fa-fw fa-chart-area"></i>
        <span>Weekly Projection Log</span></a>
    </li>
@@ -914,6 +914,7 @@ ALEXIS END ------------------------->
   <!-- Page level custom scripts -->
   <!-- ALEXIS START-->
   <script src="js/demo/form-demo.js"></script>
+  <script src="js/app.js"></script>
   <!-- ALEXIS END-->
 
   <script src="js/demo/chart-area-demo.js"></script>
