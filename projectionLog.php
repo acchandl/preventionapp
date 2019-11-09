@@ -378,7 +378,7 @@
               </div>
               <div class="card-body">
                 <!--<form action="javascript:void(0)" id="form">-->
-                  <form action="ajaxupload.php" id="projectionLogForm" method="post" enctype="multipart/form-data">
+                  <form action="ajax.php" id="projectionLogForm" method="post" enctype="multipart/form-data">
                   <div class="form-row">
                     <div class="form-group col-md-8">
                       <label for="staffName">Staff Name</label>
