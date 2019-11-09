@@ -8,7 +8,7 @@
  *******************************************************/
 
  $(document).ready(function (e) {
-  $("#form").on('submit',(function(e) {
+  $("#projectionLogForm").on('submit',(function(e) {
    e.preventDefault();
    $.ajax({
     url: "ajax.php",
@@ -33,7 +33,7 @@
      {
       // view uploaded file.
       $("#preview").html(data).fadeIn();
-      $("#serviceLogForm")[0].reset();
+      $("#projectionLogForm")[0].reset();
  	// show_images();
      }
        },
