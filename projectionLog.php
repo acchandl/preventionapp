@@ -527,6 +527,52 @@
 
           <!-- ALEXIS FORM END ------------------------------------------->
 
+          <div id="err"></div>
+      <hr>
+      <br/><br/>
+
+      
+          <?php
+          include 'db.php';
+          $sql = "SELECT * FROM file";
+          $result = mysqli_query($db,$sql) or die(mysqli_error());
+          while($row = mysqli_fetch_array($result))
+            {
+               echo "<div class=\"card shadow mb-4\">";
+                 echo "<div class=\"card-header py-3\">";
+                   echo "<h6 class=\"m-0 font-weight-bold text-primary\">";
+
+                   echo "</h6>";
+                 echo "</div>";
+                 echo "<div class=\"row\">";
+                   echo "<div class=\"col-lg-6 mb-4\">";
+                     echo "<div class=\"card bg-primary text-white shadow\">";
+                       echo "<div class=\"card-body\">";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $staffName . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $group . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $serviceArea . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $activityAreaPrevention . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $activityAreaOutreach . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $curriculum . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $unitChapter . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $actionSteps . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $nom . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $objectiveAddressed . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $directServiceStart . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $indirectServiceStart . "</p>";
+                         echo "<p style=\"font-size:15px; word-wrap: break-word;\"\>". $otherInfo . "</p>";
+                         echo "<div class=\"text-white-50 small\">";
+                         echo "</div>";
+                       echo "</div>";
+                     echo "</div>";
+                   echo "</div>";
+                 echo "</div>";
+               echo "</div>";
+             }
+             //mysqli_close($db);
+             //$db->close();
+         ?>
+
 
 
 

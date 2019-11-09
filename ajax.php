@@ -1,9 +1,7 @@
 <?php
 
 
-if(!empty($_POST['staffName']) || $_POST['group']) || $_POST['serviceArea']) || $_POST['activityAreaPrevention'])
-|| $_POST['activityAreaOutreach']) || $_POST['curriculum']) || $_POST['unitChapter']) || $_POST['actionSteps'])
-|| $_POST['nom']) || $_POST['objectiveAddressed']) || $_POST['directServiceStart']) || $_POST['indirectServiceStart']) || $_POST['otherInfo']) )
+if(!empty($_POST['staffName']) || $_POST['group']) || $_POST['serviceArea']) || $_POST['activityAreaPrevention']) || $_POST['curriculum']) || $_POST['unitChapter']) || $_POST['actionSteps']) || $_POST['nom']) || $_POST['objectiveAddressed']) || $_POST['directServiceStart']) || $_POST['indirectServiceStart']) || $_POST['otherInfo']) )
 {
 
 	if(move_uploaded_file())
@@ -12,7 +10,6 @@ $staffName = $_POST['staffName'];
 $group = $_POST['group'];
 $serviceArea = $_POST['serviceArea'];
 $activityAreaPrevention = $_POST['activityAreaPrevention'];
-$activityAreaOutreach = $_POST['activityAreaOutreach'];
 $curriculum = $_POST['curriculum'];
 $unitChapter = $_POST['unitChapter'];
 $actionSteps = $_POST['actionSteps'];
@@ -26,8 +23,7 @@ $otherInfo = $_POST['otherInfo'];
 include_once 'db.php';
 
 //insert form data in the database
-$insert = $db->query("INSERT file (staffName,group,serviceArea,activityAreaPrevention,activityAreaOutreach,curriculum,unitChapter,actionSteps,nom,objectiveAddressed,directServiceStart,indirectServiceStart,otherInfo)
-VALUES ('".$staffName."','".$group."','".$serviceArea."','".$activityAreaPrevention."','".$activityAreaOutreach."','".$curriculum."','".$unitChapter."','".$actionSteps."','".$nom."','".$objectiveAddressed."','".$directServiceStart."','".$indirectServiceStart."','".$otherInfo."')");
+$insert = $db->query("INSERT file (staffName,group,serviceArea,activityAreaPrevention,activityAreaOutreach,curriculum,unitChapter,actionSteps,nom,objectiveAddressed,directServiceStart,indirectServiceStart,otherInfo) VALUES ('".$staffName."','".$group."','".$serviceArea."','".$activityAreaPrevention."','".$curriculum."','".$unitChapter."','".$actionSteps."','".$nom."','".$objectiveAddressed."','".$directServiceStart."','".$indirectServiceStart."','".$otherInfo."')");
 
 //echo $insert?'ok':'err';
 
@@ -40,7 +36,6 @@ $sql = "SELECT * FROM file";
    $group = $row['group'];
    $serviceArea = $row['serviceArea'];
 	 $activityAreaPrevention = $row['activityAreaPrevention'];
-	 $activityAreaOutreach = $row['activityAreaOutreach'];
 	 $curriculum = $row['curriculum'];
 	 $unitChapter = $row['unitChapter'];
 	 $actionSteps = $row['actionSteps'];
@@ -56,7 +51,6 @@ $sql = "SELECT * FROM file";
 		echo "<p>". $group . "</p>";
     echo "<p>". $serviceArea . "</p>";
 		echo "<p>". $activityAreaPrevention . "</p>";
-		echo "<p>". $activityAreaOutreach . "</p>";
 		echo "<p>". $curriculum . "</p>";
 		echo "<p>". $unitChapter . "</p>";
 		echo "<p>". $actionSteps . "</p>";
