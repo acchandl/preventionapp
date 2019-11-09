@@ -378,7 +378,7 @@
               </div>
               <div class="card-body">
                 <!--<form action="javascript:void(0)" id="form">-->
-                  <form action="ajaxUpload.php" id="projectionLogForm" method="post" enctype="multipart/form-data">
+                  <form action="ajaxupload.php" id="projectionLogForm" method="post" enctype="multipart/form-data">
                   <div class="form-row">
                     <div class="form-group col-md-8">
                       <label for="staffName">Staff Name</label>
@@ -510,7 +510,8 @@
                     <label for="otherInfo">Other Information Pertinent to the Activity</label>
                     <input type="text" class="form-control" id="otherInfo" placeholder="Other">
                   </div>
-                  <button type="submit" class="btn btn-primary" value="Upload">Submit Log</button>
+                  <!--<input type="submit" class="btn btn-primary" value="Upload">Submit Log</button>-->
+                    <input class="btn btn-success" type="submit" value="Upload">
                 </form>
                 <!-- ALEXIS
                 <div class="text-center">
@@ -569,8 +570,8 @@
                  echo "</div>";
                echo "</div>";
              }
-             mysqli_close($db);
-             $db->close();
+             //mysqli_close($db);
+            // $db->close();
          ?>
 
 
