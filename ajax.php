@@ -1,7 +1,7 @@
 <?php
 
 
-if(!empty($_POST['staffName']) || $_POST['date']) || $_POST['group']) || $_POST['serviceArea']) || $_POST['activityAreaPrevention'])
+if(!empty($_POST['staffName']) || $_POST['group']) || $_POST['serviceArea']) || $_POST['activityAreaPrevention'])
 || $_POST['activityAreaOutreach']) || $_POST['curriculum']) || $_POST['unitChapter']) || $_POST['actionSteps'])
 || $_POST['nom']) || $_POST['objectiveAddressed']) || $_POST['directServiceStart']) || $_POST['indirectServiceStart']) || $_POST['otherInfo']) )
 {
@@ -9,7 +9,6 @@ if(!empty($_POST['staffName']) || $_POST['date']) || $_POST['group']) || $_POST[
 	if(move_uploaded_file())
 	{
 $staffName = $_POST['staffName'];
-$date = $_POST['date'];
 $group = $_POST['group'];
 $serviceArea = $_POST['serviceArea'];
 $activityAreaPrevention = $_POST['activityAreaPrevention'];
@@ -27,8 +26,8 @@ $otherInfo = $_POST['otherInfo'];
 include_once 'db.php';
 
 //insert form data in the database
-$insert = $db->query("INSERT file (staffName,date,group,serviceArea,activityAreaPrevention,activityAreaOutreach,curriculum,unitChapter,actionSteps,nom,objectiveAddressed,directServiceStart,indirectServiceStart,otherInfo)
-VALUES ('".$staffName."','".$date."','".$group."','".$serviceArea."','".$activityAreaPrevention."','".$activityAreaOutreach."','".$curriculum."','".$unitChapter."','".$actionSteps."','".$nom."','".$objectiveAddressed."','".$directServiceStart."','".$indirectServiceStart."','".$otherInfo."')");
+$insert = $db->query("INSERT file (staffName,group,serviceArea,activityAreaPrevention,activityAreaOutreach,curriculum,unitChapter,actionSteps,nom,objectiveAddressed,directServiceStart,indirectServiceStart,otherInfo)
+VALUES ('".$staffName."','".$group."','".$serviceArea."','".$activityAreaPrevention."','".$activityAreaOutreach."','".$curriculum."','".$unitChapter."','".$actionSteps."','".$nom."','".$objectiveAddressed."','".$directServiceStart."','".$indirectServiceStart."','".$otherInfo."')");
 
 //echo $insert?'ok':'err';
 
@@ -38,7 +37,6 @@ $sql = "SELECT * FROM file";
 		while($row = mysqli_fetch_array($result))
 		{
 	 $staffName = $row['staffName'];
-   $date = $row['date'];
    $group = $row['group'];
    $serviceArea = $row['serviceArea'];
 	 $activityAreaPrevention = $row['activityAreaPrevention'];
@@ -55,7 +53,6 @@ $sql = "SELECT * FROM file";
 		echo "<div class=\"col-sm-6 col-md-4\">";
 		echo "<div class=\"thumbnail\">";
 		echo "<p>". $staffName . "</p>";
-		echo "<p>". $date . "</p>";
 		echo "<p>". $group . "</p>";
     echo "<p>". $serviceArea . "</p>";
 		echo "<p>". $activityAreaPrevention . "</p>";
