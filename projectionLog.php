@@ -532,7 +532,7 @@
       <hr>
       <br/><br/>
 
-      
+
           <?php
           include 'db.php';
           $sql = "SELECT * FROM file";

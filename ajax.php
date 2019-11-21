@@ -25,7 +25,7 @@ include_once 'db.php';
 
 //insert form data in the database
 $insert = $db->query("INSERT file (staffName,group,serviceArea,activityAreaPrevention,activityAreaOutreach,curriculum,unitChapter,actionSteps,nom,objectiveAddressed,directServiceStart,indirectServiceStart,otherInfo) VALUES
-('".$staffName."','".$group."','".$serviceArea."','".$activityAreaPrevention."','".$curriculum."','".$unitChapter."','".$actionSteps."','".$nom."','".$objectiveAddressed."','".$directServiceStart."','".$indirectServiceStart."','".$otherInfo."')");
+('".$staffName."','".$group."','".$serviceArea."','".$activityAreaPrevention."','".$activityAreaOutreach."','".$curriculum."','".$unitChapter."','".$actionSteps."','".$nom."','".$objectiveAddressed."','".$directServiceStart."','".$indirectServiceStart."','".$otherInfo."')");
 
 //echo $insert?'ok':'err';
 
@@ -38,6 +38,7 @@ $sql = "SELECT * FROM file";
    $group = $row['group'];
    $serviceArea = $row['serviceArea'];
 	 $activityAreaPrevention = $row['activityAreaPrevention'];
+	 $activityAreaOutreach = $row['$activityAreaOutreach']
 	 $curriculum = $row['curriculum'];
 	 $unitChapter = $row['unitChapter'];
 	 $actionSteps = $row['actionSteps'];
@@ -53,6 +54,7 @@ $sql = "SELECT * FROM file";
 		echo "<p>". $group . "</p>";
     echo "<p>". $serviceArea . "</p>";
 		echo "<p>". $activityAreaPrevention . "</p>";
+		echo "<p>". $activityAreaOutreach . "</p>";
 		echo "<p>". $curriculum . "</p>";
 		echo "<p>". $unitChapter . "</p>";
 		echo "<p>". $actionSteps . "</p>";
