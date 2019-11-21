@@ -570,8 +570,8 @@
                  echo "</div>";
                echo "</div>";
              }
-             //mysqli_close($db);
-            // $db->close();
+             mysqli_close($db);
+            $db->close();
          ?>
 
 
